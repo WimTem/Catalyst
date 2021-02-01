@@ -17,3 +17,4 @@ oprob = ODEProblem(osys, u0map, tspan, pmap)
 sol   = solve(oprob, Tsit5())
 
 plot(sol, lw=2)
+savefig("copol.png")
