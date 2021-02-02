@@ -1,4 +1,4 @@
-using Catalyst, Catlab, DiffEqBase, OrdinaryDiffEq, Plots
+using Catalyst, Catlab, DiffEqBase, OrdinaryDiffEq, Plots, Latexify
 
 rn = @reaction_network begin
     k11, M1′+ M1 --> M1′
@@ -18,3 +18,5 @@ sol   = solve(oprob, Tsit5())
 
 plot(sol, lw=2)
 savefig("copol.png")
+
+latexify(rn)
